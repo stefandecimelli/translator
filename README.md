@@ -2,6 +2,8 @@
 
 A modern web application that translates text into up to 4 different languages simultaneously. Built with Deno, TypeScript, and a free translation API.
 
+![Multi-Language Translator Screenshot](images/Screenshot.png)
+
 ## ✨ Features
 
 - **Multi-Language Translation**: Translate text into up to 4 languages at once
