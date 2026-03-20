@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Language Translator</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <div class="header-text">
+                    <h1>🌍 Multi-Language Translator</h1>
+                    <p class="subtitle">Translate text into up to 4 languages simultaneously</p>
+                </div>
+                <div class="theme-toggle">
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="themeToggle">
+                        <span class="slider">
+                            <span class="slider-icon sun">☀️</span>
+                            <span class="slider-icon moon">🌙</span>
+                        </span>
+                    </label>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="input-section">
+                <label for="sourceText">Enter text to translate:</label>
+                <textarea 
+                    id="sourceText" 
+                    placeholder="Type or paste your text here..."
+                    rows="6"
+                ></textarea>
+            </div>
+
+            <div class="language-selection">
+                <div class="language-header">
+                    <h3>Select Target Languages (up to 4):</h3>
+                    <button id="addLanguageBtn" class="add-language-btn" title="Add another language">
+                        <span class="plus-icon">+</span> Add Language
+                    </button>
+                </div>
+                <div id="languageContainer" class="language-grid">
+                    <!-- Language selects will be added dynamically -->
+                </div>
+            </div>
+
+            <button id="translateBtn" class="translate-btn">
+                <span class="btn-text">Translate</span>
+                <span class="btn-loader" style="display: none;">Translating...</span>
+            </button>
+
+            <div id="error" class="error" style="display: none;"></div>
+
+            <div id="results" class="results" style="display: none;">
+                <h3>Translations:</h3>
+                <div id="translationResults" class="translation-grid"></div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Powered by Deno & TypeScript | Free Translation Service</p>
+        </footer>
+    </div>
+
+    <script src="/app.js"></script>
+</body>
+</html>
